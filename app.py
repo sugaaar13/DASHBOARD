@@ -18,6 +18,34 @@ def judul():
 
 
 # =========================
+# FOOTER
+# =========================
+def footer():
+    st.markdown("---")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("**📊 Sumber Data**")
+        st.caption("COVID-19 Indonesia Time Series")
+    
+    with col2:
+        st.markdown("**📅 Update Terakhir**")
+        st.caption("Data real-time dari sumber resmi")
+    
+    with col3:
+        st.markdown("**👨‍💻 Dibuat oleh**")
+        st.caption("Dashboard Analisis COVID-19 Indonesia")
+    
+    st.markdown(
+        "<p style='text-align: center; color: gray; font-size: 12px;'>"
+        "© 2024 Dashboard COVID-19 Indonesia | Semua hak dilindungi"
+        "</p>",
+        unsafe_allow_html=True
+    )
+
+
+# =========================
 # SIDEBAR
 # =========================
 st.sidebar.title("🏙️ Navigasi")
@@ -64,6 +92,9 @@ if menu == "Home":
 
     # Map chart
     map_chart(df_filtered, year)
+    
+    # Footer
+    footer()
 
 
 # =========================
@@ -90,3 +121,6 @@ elif menu == "Halaman Data":
 
     # Show data
     show_data(df_filtered)
+    
+    # Footer
+    footer( "sugarano okto forbiah tamba || 184240004 || sains data - A")
